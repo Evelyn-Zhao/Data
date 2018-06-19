@@ -1,0 +1,54 @@
+.AppBar {
+  text-align: center;
+  width: 100vw;
+  height: 60px;
+}
+
+.AppBar-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.AppBar-button1 {
+  position: absolute;
+  right: 17.5px;
+  top: 12.5px;
+  border-radius: 20px;
+  background: white;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.AppBar-button2 {
+  position: absolute;
+  right: 140px;
+  top: 12.5px;
+  border-radius: 20px;
+  background: white;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+  cursor: pointer;
+}
+
+.AppBar-username-label {
+  position: absolute;
+  right: 140px;
+  top: 12.5px;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150%;
+}
