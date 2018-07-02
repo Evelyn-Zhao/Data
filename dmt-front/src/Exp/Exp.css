@@ -1,0 +1,17 @@
+.Exp{
+    padding: 80px;
+    background-color: burlywood;
+}
+
+.Exp-table{
+    border: 1px solid #ddd;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.Exp-th{
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 15px;
+}

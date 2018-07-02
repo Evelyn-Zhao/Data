@@ -5,6 +5,11 @@ import data from './icons/analysis.png';
 import './Main.css'
 
 export default class Main extends Component {
+
+    getExpList = async () => {
+        this.props.history.push("/exp");
+    }
+
     render() {
         return (
             <div style={{paddingTop: "60px"}}>
@@ -17,7 +22,7 @@ export default class Main extends Component {
                
                 
                 <div className = "Main-categories">
-                    <div className = "Main-category"> 
+                    <div onClick={this.getExpList} className = "Main-category"> 
                         <img alt = "Experiments list" src={experiment}/>
                         <h2>Experiments</h2>
                         <h5 style={{marginTop:"0"}}>Grab the list of experiment with relavant info</h5>

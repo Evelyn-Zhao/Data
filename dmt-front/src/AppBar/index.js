@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './AppBar.css';
-import AppLogin from './AppLogin';
+import AppLogin from '../AppLogin';
 
 class AppBar extends Component {
     async componentDidMount() {
