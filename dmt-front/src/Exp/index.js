@@ -71,7 +71,7 @@ export default class Exp extends Component {
                             <tr className="Exp-th">
                                 <th className="Exp-th">Number</th>
                                 <th style = {{"width": "150px"}}className="Exp-th">Name</th>
-                                <th className="Exp-th">Experimenters</th>
+                                <th className="Exp-th">Experiment Description</th>
                                 <th className="Exp-th">Date</th>
                             </tr>
                             {

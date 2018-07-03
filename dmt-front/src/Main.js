@@ -10,6 +10,10 @@ export default class Main extends Component {
         this.props.history.push("/exp");
     }
 
+    getDataList = async () => {
+        this.props.history.push("/data");
+    }
+
     render() {
         return (
             <div style={{paddingTop: "60px"}}>
@@ -27,7 +31,7 @@ export default class Main extends Component {
                         <h2>Experiments</h2>
                         <h5 style={{marginTop:"0"}}>Grab the list of experiment with relavant info</h5>
                     </div>
-                    <div className = "Main-category">
+                    <div onClick={this.getDataList} className = "Main-category">
                         <img alt = "Data list" src={data}/>
                         <h2>Data</h2>
                         <h5 style={{marginTop:"0"}}>Grab the list of data with relavant info</h5>

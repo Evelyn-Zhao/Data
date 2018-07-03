@@ -9,6 +9,8 @@ import AppBar from './AppBar';
 import Register from './Register';
 import Exp from './Exp';
 import ExpDetails from './ExpDetails';
+import Data from './Data';
+//import DataDetails from './DataDetails';
 import 'antd/dist/antd.css';
 
 //ReactDOM.render(<App />, document.getElementById('root'));
@@ -22,6 +24,8 @@ ReactDOM.render((
             <Route path='/register' component={Register}/>
             <Route path='/exp' component={Exp}/>
             <Route path='/experiments/:id' component={ExpDetails}/>
+            <Route path='/data' component={Data}/>
+            
         </Switch>
         </div>
     </BrowserRouter>

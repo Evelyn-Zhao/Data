@@ -35,24 +35,29 @@ export default class ExpDetails extends Component {
                     <center>
                         <h1>{details.name}</h1>
                     </center>
+                    <div style={{marginLeft: 70}}>
                         <h3 style = {{textAlign:"left"}} >Experimenters</h3>
-                        <p style={{marginLeft: 16}}>{details.experimenters}</p>
+                        <p style={{marginLeft: 30}}>{details.experimenters.map (exper => <p>{exper}</p>)}</p>
                         <h3 style = {{textAlign:"left"}}>Date</h3>
-                        <p style={{marginLeft: 16}}>{details.date ? details.date + '/' : ''}{details.month}/{details.year}</p>
+                        <p style={{marginLeft: 30}}>{details.date ? details.date + '/' : ''}{details.month}/{details.year}</p>
                         <h3 style = {{textAlign:"left"}}>Description</h3>
-                        <p style={{marginLeft: 16}}>{details.description}</p>
+                        <p style={{marginLeft: 30}}>{details.description}</p>
                         <h3 style = {{textAlign:"left"}}>Outcomes</h3>
-                        <p style={{marginLeft: 16}}>{details.outcomes ? details.outcomes.map(d => 
-                                                                                            
-                        <tr>
-                            <td>{d.name}</td>
-                            <td>{d.relation}</td>
-                        </tr>
-                    ) : 'NULL'}</p>
-                        <h3 style = {{textAlign:"left"}}>Data</h3>
-                     
+                        <p style={{marginLeft: 30}}>{details.outcomes ? details.outcomes.map(d =>                         
+                                                                                                <tr>
+                                                                                                    <td>{d.name}</td>
+                                                                                                    <td>{d.relation}</td>
+                                                                                                </tr>
+                                                                                            ) : 'NULL'}</p>
+                        <h3 style = {{textAlign:"left"}}>Data Generated</h3>
+                        <p style={{marginLeft: 30}}>{details.data ? details.data.map(d =>                         
+                                                                                                <tr>
+                                                                                                    <td>{d.name}</td>
+                                                                                                    <td>{d.relation}</td>
+                                                                                                </tr>
+                                                                                            ) : 'NULL'}</p>
                         <h3 style = {{textAlign:"left"}}>Experiment Timeline</h3>
-
+                    </div>
                 </div>
 
                 {/*<Link to='/'>Back to home</Link>*/}
