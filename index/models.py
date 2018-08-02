@@ -12,27 +12,16 @@ class Users (models.Model):
     #def info():
     #    return usrinfo
 
+#the id of ecperimenter will be used to find the location of data files
 class Experiment (models.Model):
-    expname = models.CharField(max_length=50, primary_key=True)
-    #year and month would be fine
-    expdate = models.DateField()
-    parent = models.ForeignKey('Experiment', on_delete = models.CASCADE)
-    expdescriprion = models.CharField(max_length=500)
+    expid = models.IntegerField(primary_key=True) 
+    expname = models.CharField(max_length=50)
 
 class Data (models.Model):
-    dataname = models.CharField(max_length=50, primary_key=True)
-    datatype = models.DateField()
-    datadescription = models.CharField(max_length=500)
-    datadate = models.CharField(max_length=40)
-    exp = models.ForeignKey('Experiment', on_delete = models.CASCADE)
+    dataid = models.IntegerField(primary_key=True) 
+    dataname = models.CharField(max_length=50)
+    datapath = models.CharField(max_length=300)
+    datatype = models.CharField(max_length=50)
+    exp = models.ForeignKey(Experiment, on_delete=models.CASCADE)
+    refer_no = models.IntegerField()
 
-#The table stores the info about experimenter
-class Experimenter (models.Model):
-    experid = models.AutoField(primary_key=True)
-    expername = models.CharField(max_length=20)
-    expertitle =  models.CharField(max_length=10)
-    experinstitute = models.CharField(max_length=40)
-    user = models.OneToOneField(
-        Users,
-        on_delete = models.CASCADE,
-    )

@@ -140,3 +140,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'dmt-front/build/static'), 
 )
+
+EXP_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Experiment'
+REL_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Experiment_Relationship'
+DATA_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Data_Pool'
