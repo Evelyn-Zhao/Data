@@ -12,6 +12,7 @@ urlpatterns = [
     path('expdetails', views.getExpDetails, name = 'expdetails'),
     path('data', views.getDataList, name = 'data'),
     path('datadetails', views.getDataDetails, name = 'datadetails'),
+    
     #path('add/',views.add, name='add'),
     #path('add2/<int:a>/<int:b>/',views.old_add2_redirect),
     #path('new_add2/<int:a>/<int:b>/', views.add2, name='add2'),

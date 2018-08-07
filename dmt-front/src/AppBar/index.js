@@ -67,12 +67,21 @@ class AppBar extends Component {
         this.setState({hide: true})
     }
 
+    manageExps = async () =>{
+        this.props.history.push("/manageExps");
+    }
+    
     renderButton() {
         if (this.state.user) {
             console.log(this.state);
             return  [
-                    <div key = {1} className = "AppBar-username-label"> Hi, {this.state.user.usrname} </div>,
-                    <div key = {2} className = "AppBar-button1" onClick={this.logout}> Logout </div>
+                    <a key = {1} className = "AppBar-username-label"> Hi, {this.state.user.usrname} 
+                        <ul>
+                            <li onClick={this.manageExps}>Manage Experiments</li>
+                            <li onClick={this.logout}>Log Out</li>
+                        </ul>
+                        
+                    </a>
             ];
         } else {
             return  [
