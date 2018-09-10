@@ -13,6 +13,8 @@ export default class Register extends Component {
     state = {
         useremail: "",
         username: "",
+        userfirstname: "",
+        userlastname: "",
         password: "", 
         rpassword: "", 
         authority: 0,
@@ -20,13 +22,13 @@ export default class Register extends Component {
 
     submit = async () => {
         console.log([this.state.username, this.state.password, this.state.rpassword]);
-        if (this.state.password === this.state.rpassword && (this.state.password !== "" && this.state.rpassword !== "")){
+        if (this.state.password === this.state.rpassword && (this.state.password !== "" && this.state.rpassword !== "" && this.state.userfirstname !== ""&& this.state.userlastname !=="")){
             try{
                 console.log([this.state.username, this.state.password]);
                 const response = await fetch('http://localhost:8000/register', {
                     method: 'POST',
                     mode: 'CORS',
-                    body: `username=${this.state.username}&password=${this.state.password}&useremail=${this.state.useremail}`,
+                    body: `username=${this.state.username}&password=${this.state.password}&useremail=${this.state.useremail}&userfirstname=${this.state.userfirstname}&userlastname=${this.state.userlastname}`,
                     credentials: 'include',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
@@ -39,6 +41,7 @@ export default class Register extends Component {
                 //throw to chatch ()
                 //all exceptions will be dealt in catch(e) 
                 if (data.error) throw new Error(data.error);
+                console.log(data.error)
                 
                 console.log("registered");
                     
@@ -57,8 +60,16 @@ export default class Register extends Component {
                <p>Please fill in the following form to create an account</p>
                <hr/>
             <div className = "Register-each-row">
-                <label><b>Username</b></label>
+                <label><b>Username (Used for login)</b></label>
                 <input onChange={e => this.setState({username:e.target.value})} className = "Register-input-field" placeholder="Enter Username" name="username" required/>
+            </div>
+            <div className = "Register-each-row">
+                <label><b>First Name</b></label>
+                <input onChange={e => this.setState({userfirstname:e.target.value})} className = "Register-input-field" placeholder="Enter your First Name" name="username" required/>
+            </div>
+            <div className = "Register-each-row">
+                <label><b>Last Name</b></label>
+                <input onChange={e => this.setState({userlastname:e.target.value})} className = "Register-input-field" placeholder="Enter your Last Name" name="username" required/>
             </div>
             <div className = "Register-each-row">
                 <label><b>Email</b></label>

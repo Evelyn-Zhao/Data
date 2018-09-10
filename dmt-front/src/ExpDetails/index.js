@@ -24,6 +24,7 @@ export default class ExpDetails extends Component {
         details: undefined,
     }
 
+
     render() {
         const details = this.state.details;
         if(details === undefined){
@@ -36,27 +37,34 @@ export default class ExpDetails extends Component {
                         <h1>{details.name}</h1>
                     </center>
                     <div style={{marginLeft: 70}}>
-                        <h3 style = {{textAlign:"left"}} >Experimenters</h3>
-                        <p style={{marginLeft: 30}}>{details.experimenters.map (exper => <p>{exper}</p>)}</p>
-                        <h3 style = {{textAlign:"left"}}>Date</h3>
-                        <p style={{marginLeft: 30}}>{details.date ? details.date + '/' : ''}{details.month}/{details.year}</p>
+                        <h3 style = {{textAlign:"left"}} >Experiment ID</h3>
+                        <p style={{marginLeft: 30}}>{details.expid}</p>
+                        <h3 style = {{textAlign:"left"}} >Experiment Name</h3>
+                        <p style={{marginLeft: 30}}>{details.expname}</p>
+                        <h3 style = {{textAlign:"left"}} >Experiment Type</h3>
+                        <p style={{marginLeft: 30}}>{details.exptype}</p>
                         <h3 style = {{textAlign:"left"}}>Description</h3>
                         <p style={{marginLeft: 30}}>{details.description}</p>
+                        <h3 style = {{textAlign:"left"}}>Experiment Period</h3>
+                        <p style={{marginLeft: 30}}>{details.expperiod}</p>
+                        
+                        <h3 style = {{textAlign:"left"}} >Experimenters</h3>
+                        <p style={{marginLeft: 30}}>{details.experimenters.map (exper => <p>{exper}</p>)}</p>
+                        
                         <h3 style = {{textAlign:"left"}}>Outcomes</h3>
                         <p style={{marginLeft: 30}}>{details.outcomes ? details.outcomes.map(d =>                         
                                                                                                 <tr>
-                                                                                                    <td>{d.name}</td>
-                                                                                                    <td>{d.relation}</td>
+                                                                                                    <td>{d}</td>
                                                                                                 </tr>
                                                                                             ) : 'NULL'}</p>
                         <h3 style = {{textAlign:"left"}}>Data Generated</h3>
                         <p style={{marginLeft: 30}}>{details.data ? details.data.map(d =>                         
                                                                                                 <tr>
-                                                                                                    <td>{d.name}</td>
-                                                                                                    <td>{d.relation}</td>
+                                                                                                    <a href={'http://localhost:8000/downloadData?id=' + d.dataid}>{d.dataid}: {d.datadescription}</a>
+                                                                                                    
                                                                                                 </tr>
                                                                                             ) : 'NULL'}</p>
-                        <h3 style = {{textAlign:"left"}}>Experiment Timeline</h3>
+                        <h3 style = {{textAlign:"left"}}>Related Experiments</h3>
                     </div>
                 </div>
 

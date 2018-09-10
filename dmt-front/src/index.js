@@ -11,6 +11,8 @@ import Exp from './Exp';
 import ExpDetails from './ExpDetails';
 import Data from './Data';
 import ManageExps from './ManageExps';
+import DownloadData from './DownloadData';
+import EditPersonalInfo from './EditPersonalInfo';
 //import DataDetails from './DataDetails';
 import 'antd/dist/antd.css';
 
@@ -27,6 +29,7 @@ ReactDOM.render((
             <Route path='/experiments/:id' component={ExpDetails}/>
             <Route path='/data' component={Data}/>
             <Route path='/manageExps' component={ManageExps}/>
+            <Route psth='/editPersonalInfo' component={EditPersonalInfo}/>
         </Switch>
         </div>
     </BrowserRouter>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
+import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import './AppLogin.css';
 
 class AppLogin extends Component{
@@ -8,7 +9,8 @@ class AppLogin extends Component{
         username: "",
         password: "", 
     } 
-
+   
+      
     login = async () => {
         try{
             console.log([this.state.username, this.state.password]);
@@ -45,27 +47,27 @@ class AppLogin extends Component{
 
     
     render(){
-        
+       
         return(
-           
+            
+
             
                 <div  key={1} onClick={this.increaseHide} className = "AppBar-popup-outer"></div>,
     
                 <div  key={2} className = "AppLogin-popup-inner">
                     <div className = "AppLogin-login-field">
                         <label htmlFor="username">Username: </label>
-                        <input onChange={e => this.setState({username:e.target.value})} type="text" name="username" id="username"/>
+                        <Input onChange={e => this.setState({username:e.target.value})} type="text" name="username" id="username"/>
                     </div>
                     <div className = "AppLogin-login-field">
                         <label htmlFor="password">Password: </label>
-                        <input onChange={e => this.setState({password:e.target.value})} type="password" name="password" id="password"/>
+                        <Input onChange={e => this.setState({password:e.target.value})} type="password" name="password" id="password"/>
                     </div>
-                    <div className = "AppLogin-button-group">
-                        <button className = "AppLogin-button-field" onClick={this.login}>Login</button>
-                    </div>
+                    <Checkbox style={{"padding":"10px"}}>Remember me</Checkbox>
+                    <Button type="primary" className="login-form-button" onClick={this.login}>Log in</Button>
+                    Or <a><Link to={'/register'}>register now!</Link></a>
+                    
                 </div>
-                               
-                
 
                 
             

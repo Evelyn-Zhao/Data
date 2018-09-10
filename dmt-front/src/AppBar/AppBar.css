@@ -40,18 +40,26 @@
   font-size: 150%;
   cursor: pointer;
 }
-
+.AppBar-navi-and-user{
+  margin-left: 240px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .AppBar-username-label {
   position: absolute;
   right: 50px;
   top: 12.5px;
-  width: 100px;
+  width: 250px;
   max-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 150%;
+  color: '#f56a00';
+  background-color: '#fde3cf';
 }
 
 .AppBar-username-label:hover ul {

@@ -144,3 +144,7 @@ STATICFILES_DIRS = (
 EXP_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Experiment'
 REL_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Experiment_Relationship'
 DATA_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Data_Pool'
+DATA_REL_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Data_Relationship'
+OUT_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Outcome_Pool'
+OUT_REL_DIRS = '/Users/Evelyn/projects/Data_Management_Tool/Outcome_Relationship'
+DOWNLOAD_DIRS = '/Users/Evelyn/Downloads'

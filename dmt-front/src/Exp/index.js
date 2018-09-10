@@ -69,10 +69,10 @@ export default class Exp extends Component {
                     <table className="Exp-table">
                         <tbody>
                             <tr className="Exp-th">
-                                <th className="Exp-th">Number</th>
+                                <th className="Exp-th">Experiment ID</th>
                                 <th style = {{"width": "150px"}}className="Exp-th">Name</th>
                                 <th className="Exp-th">Experiment Description</th>
-                                <th className="Exp-th">Date</th>
+                                <th className="Exp-th">Type</th>
                             </tr>
                             {
                                 this.state.experiments && this.state.experiments.map(e =>
@@ -80,7 +80,7 @@ export default class Exp extends Component {
                                         <td className="Exp-th">{e.expid}</td>
                                         <td className="Exp-th"><Link to={'/experiments/' + e.expid}>{e.expname}</Link></td>
                                         <td className="Exp-th">{e.description}</td>
-                                        <td className="Exp-th">{e.date ? e.date + '/' : ''}{e.month}/{e.year}</td>
+                                        <td className="Exp-th">{e.exptype}</td>
                                     </tr>
                                 )
                             }

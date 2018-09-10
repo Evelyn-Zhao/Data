@@ -3,6 +3,7 @@ import SearchBar from './SearchBar'
 import experiment from './icons/scientist.png';
 import data from './icons/analysis.png';
 import './Main.css'
+import NaviBar from './NaviBar';
 
 export default class Main extends Component {
 
@@ -17,7 +18,9 @@ export default class Main extends Component {
     render() {
         return (
             <div style={{paddingTop: "60px"}}>
+                
                 <div className = "Main-intro">
+                
                     <center>
                         <h1>EXPLORE THE DATA</h1>
                     </center>
